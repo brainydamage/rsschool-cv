@@ -105,19 +105,53 @@ Social meaningful project, cloud-native serverless solution, it has been release
 ___
 ## 💻 Code examples  
 ```javascript
-module.exports.getUserAndClinicsTableData = async () => {
-  let items;
-  await documentClient.scan({
-    TableName: userAndClinicsTable,
-  })
-  .promise()
-  .then((data) => {
-    items = data.Items;
-  })
-  .catch(err => logger.debug(`Failed to get table state`));
+async function getClinicsWithVaxRoom(clinics) {
+  let vaxClinics = [];
+  let promises = [];
 
-  return items;
-};
+  for (const clinic of clinics) {
+    if (clinic.id !== 0) {
+      promises.push(checkClinic(clinic, vaxClinics));
+    }
+  }
+
+  await Promise.all(promises);
+
+  logger.debug(`Found ${vaxClinics.length} clinics`);
+  return covidClinics;
+}
+
+async function checkClinic(clinic, vaxClinics) {
+  const params = {
+    FunctionName: 'vax-bot-dev-checker',
+    InvocationType: 'RequestResponse',
+    Payload: JSON.stringify(clinic.id),
+  };
+
+  return new Promise(function (resolve, reject) {
+    lambda.invoke(params, function (error, data) {
+      if (error) {
+        logger.error(`Error checking clinic ${clinic.id}`);
+        reject(error);
+      } else if (data) {
+        if (JSON.parse(data.Payload).statusCode === 200) {
+          const clinicToAdd = {
+            "id": clinic.id,
+            "districtId": clinic.districtId,
+            "districtName": clinic.districtName,
+            "lpuFullName": clinic.lpuFullName,
+            "lpuShortName": clinic.lpuShortName,
+            "address": clinic.address,
+            "phone": clinic.phone,
+          }
+          vaxClinics.push(clinicToAdd);
+        }
+
+        resolve();
+      }
+    })
+  });
+}
 ```
 
 ```java
