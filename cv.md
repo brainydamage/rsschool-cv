@@ -11,7 +11,7 @@ _software engineer_
 [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/brainydamage)
 
 ___
-##️🙋 Areas of Expertise
+##️ 🙋 Areas of Expertise
 
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white)
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=black)
@@ -22,7 +22,7 @@ ___
 ![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)
 
 ___
-##🛠️ Work Experience
+## 🛠️ Work Experience
 
 * **Software Engineer at [EPAM Systems](https://www.epam-group.ru/)**  
 (_November 2017 - Present_)
@@ -61,7 +61,7 @@ ___
     * Translating guides and instruction from Russian into English.
 
 ___
-##📜 Education
+## 📜 Education
 
 **📍 Design and Development of Information Systems**  
 Saint-Petersburg State Polytechnical University  
@@ -77,7 +77,7 @@ _Computer methods for analyzing and machine translation of English attributive p
 
 
 ___
-##📚  Certifications
+## 📚 Certifications
 
 📍 AWS Certified Solutions Architect - Associate  
 📍 Google Certified Professional Cloud Architect  
