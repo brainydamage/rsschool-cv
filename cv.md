@@ -3,7 +3,8 @@ _software engineer_
 
 > Innovative, task-driven professional with __5+ years__ of experience in software development.  
 > Proficient in __backend development__, testing code and troubleshooting issues.  
-> Self-starter, quick-learner, problem-solver with a positive, collaborative, and __team-based attitude__.
+> Self-starter, quick-learner, problem-solver with a positive, collaborative, and __team-based attitude__.  
+> Fluent in English (B2+ to C1).
 
 [![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/youlass)
 [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ulyana-andreeva/)
@@ -84,3 +85,62 @@ ___
 📍 Oracle Database SQL Certified Expert  
 
 
+___
+## 🐾 Pet-project  
+[Telegram bot](http://t.me/gorzdrav_checker_bot) that helps users to find the ticket to vaccination at requested health centres.  
+User subscribes for one or several desired clinics and then gets a message as soon as the number of tickets in selected clinics changed.  
+Social meaningful project, cloud-native serverless solution, it has been released in February 2020 by my own.  
+
+🔎 **Facts and Figures:**
+* **1000+** unique users in all the time the bot has been running.
+* **112** clinics tracked every several minutes 24/7.
+* **280+** users reported successful registration through the bot.
+
+🚧 **Under the hood:**
+* AWS Lambda with Node.js.
+* AWS DynamoDB.
+* AWS SQS + Java-consumer runs on EC2.
+
+
+___
+## 💻 Code examples  
+```javascript
+module.exports.getUserAndClinicsTableData = async () => {
+  let items;
+  await documentClient.scan({
+    TableName: userAndClinicsTable,
+  })
+  .promise()
+  .then((data) => {
+    items = data.Items;
+  })
+  .catch(err => logger.debug(`Failed to get table state`));
+
+  return items;
+};
+```
+
+```java
+@Override
+  public IdPConnection findDefaultConnection(String customer) {
+    try {
+      String connectionName = settingsClient.getConnectionName(customerId);
+      List<IdPConnection> connections = getConnections(customerId);
+      return connections
+          .stream()
+          .filter(connection -> connection.getConnectionName().equals(connectionName))
+          .findAny()
+          .orElseThrow(() ->
+              new NotFound(TransportErrorCode.fromHttp(Http.Status.NOT_FOUND),
+                  new ExceptionMessage(REASON,
+                      "Could not find connection " + connectionName)));
+    } catch (ConfigurationException e) {
+      log.info(
+          "Config does not exist: customer={}; message={}",
+          customerId,
+          e.getMessage());
+      throw new NotFound(
+          TransportErrorCode.fromHttp(Http.Status.NOT_FOUND),
+          new ExceptionMessage(REASON, e.getMessage()));
+    }
+```
