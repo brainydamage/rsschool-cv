@@ -8,7 +8,7 @@ _software engineer_
 
 [![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/youlass)
 [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ulyana-andreeva/)
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](88.andreeva@gmail.com)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:88.andreeva@gmail.com)
 [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/brainydamage)
 
 ___
@@ -104,53 +104,56 @@ Social meaningful project, cloud-native serverless solution, it has been release
 
 ___
 ## 💻 Code examples  
-```javascript
-async function getClinicsWithVaxRoom(clinics) {
-  let vaxClinics = [];
-  let promises = [];
+> Write a RLE encoder and decoder which encodes the string **"AAABBBCCCD"** as **"3A3B3C1D"**. The texts to encode will always consist of only uppercase characters, no numbers.  
+> [6 kyu CodeWars Kata](https://www.codewars.com/kata/578bf2d8daa01a4ee8000046)
 
-  for (const clinic of clinics) {
-    if (clinic.id !== 0) {
-      promises.push(checkClinic(clinic, vaxClinics));
+```javascript
+function encode(input) {
+  let result = '';
+
+  if (input.length > 0) {
+    let currentLetter = input[0];
+    let numberOfCurrentLetters = 1;
+
+    for (let i = 1; i < input.length; i++) {
+      if (input[i] === currentLetter) {
+        numberOfCurrentLetters += 1;
+      } else {
+        result = result.concat(`${numberOfCurrentLetters}${currentLetter}`);
+        currentLetter = input[i];
+        numberOfCurrentLetters = 1;
+      }
+    }
+    result = result.concat(`${numberOfCurrentLetters}${currentLetter}`);
+  }
+
+  return result;
+}
+
+function decode(input) {
+  let result = '';
+
+  if (input.length > 1) {
+    let numberOfCurrentLetters = input[0];
+    let currentLetter = '';
+
+    for (let i = 1; i < input.length; i++) {
+
+      if (isNaN(parseInt(input[i]))) {
+        currentLetter = input[i];
+        result = result.concat(currentLetter.repeat(parseInt(numberOfCurrentLetters)));
+
+        numberOfCurrentLetters = '';
+        currentLetter = '';
+      } else {
+        numberOfCurrentLetters = numberOfCurrentLetters.concat(input[i]);
+      }
+
+      result = result.concat(currentLetter.repeat(parseInt(numberOfCurrentLetters)));
     }
   }
 
-  await Promise.all(promises);
-
-  logger.debug(`Found ${vaxClinics.length} clinics`);
-  return vaxClinics;
-}
-
-async function checkClinic(clinic, vaxClinics) {
-  const params = {
-    FunctionName: 'vax-bot-dev-checker',
-    InvocationType: 'RequestResponse',
-    Payload: JSON.stringify(clinic.id),
-  };
-
-  return new Promise(function (resolve, reject) {
-    lambda.invoke(params, function (error, data) {
-      if (error) {
-        logger.error(`Error checking clinic ${clinic.id}`);
-        reject(error);
-      } else if (data) {
-        if (JSON.parse(data.Payload).statusCode === 200) {
-          const clinicToAdd = {
-            "id": clinic.id,
-            "districtId": clinic.districtId,
-            "districtName": clinic.districtName,
-            "lpuFullName": clinic.lpuFullName,
-            "lpuShortName": clinic.lpuShortName,
-            "address": clinic.address,
-            "phone": clinic.phone,
-          }
-          vaxClinics.push(clinicToAdd);
-        }
-
-        resolve();
-      }
-    })
-  });
+  return result;
 }
 ```
 
@@ -178,3 +181,8 @@ async function checkClinic(clinic, vaxClinics) {
           new ExceptionMessage(REASON, e.getMessage()));
     }
 ```
+
+___
+## 🇬🇧 English Level
+![efset_badge](efset.png)  
+_*According to [EF SET Quick Check](https://www.efset.org/ru/quick-check/)_ 
