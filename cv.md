@@ -118,7 +118,7 @@ async function getClinicsWithVaxRoom(clinics) {
   await Promise.all(promises);
 
   logger.debug(`Found ${vaxClinics.length} clinics`);
-  return covidClinics;
+  return vaxClinics;
 }
 
 async function checkClinic(clinic, vaxClinics) {
