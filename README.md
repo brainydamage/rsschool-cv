@@ -1,1 +1,1 @@
-https://brainydamage.github.io/rsschool-cv/cv
+https://brainydamage.github.io/rsschool-cv/
