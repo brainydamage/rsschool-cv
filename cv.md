@@ -104,56 +104,17 @@ Social meaningful project, cloud-native serverless solution, it has been release
 
 ___
 ## 💻 Code examples  
-> Write a RLE encoder and decoder which encodes the string **"AAABBBCCCD"** as **"3A3B3C1D"**. The texts to encode will always consist of only uppercase characters, no numbers.  
-> [6 kyu CodeWars Kata](https://www.codewars.com/kata/578bf2d8daa01a4ee8000046)
+> In this kata, you will write a function that returns the positions and the values of the "peaks" (or local maxima) of a numeric array.  
+> [5 kyu CodeWars Kata](https://www.codewars.com/kata/5279f6fe5ab7f447890006a7)
 
 ```javascript
-function encode(input) {
-  let result = '';
+function pickPeaks(arr){
+  let posArr = arr
+          .map((val, pos) => pos * Math.sign(val - arr[pos-1]))
+          .filter(val => val && val!==0)
+          .filter((val, pos, arr) => val>0 && arr[pos-1] < val > arr[pos+1]);
 
-  if (input.length > 0) {
-    let currentLetter = input[0];
-    let numberOfCurrentLetters = 1;
-
-    for (let i = 1; i < input.length; i++) {
-      if (input[i] === currentLetter) {
-        numberOfCurrentLetters += 1;
-      } else {
-        result = result.concat(`${numberOfCurrentLetters}${currentLetter}`);
-        currentLetter = input[i];
-        numberOfCurrentLetters = 1;
-      }
-    }
-    result = result.concat(`${numberOfCurrentLetters}${currentLetter}`);
-  }
-
-  return result;
-}
-
-function decode(input) {
-  let result = '';
-
-  if (input.length > 1) {
-    let numberOfCurrentLetters = input[0];
-    let currentLetter = '';
-
-    for (let i = 1; i < input.length; i++) {
-
-      if (isNaN(parseInt(input[i]))) {
-        currentLetter = input[i];
-        result = result.concat(currentLetter.repeat(parseInt(numberOfCurrentLetters)));
-
-        numberOfCurrentLetters = '';
-        currentLetter = '';
-      } else {
-        numberOfCurrentLetters = numberOfCurrentLetters.concat(input[i]);
-      }
-
-      result = result.concat(currentLetter.repeat(parseInt(numberOfCurrentLetters)));
-    }
-  }
-
-  return result;
+  return {pos: posArr, peaks: posArr.map(pos => arr[pos])};
 }
 ```
 
@@ -161,8 +122,8 @@ function decode(input) {
 @Override
   public IdPConnection findDefaultConnection(String customer) {
     try {
-      String connectionName = settingsClient.getConnectionName(customerId);
-      List<IdPConnection> connections = getConnections(customerId);
+      String connectionName = settingsClient.getConnectionName(customer);
+      List<IdPConnection> connections = getConnections(customer);
       return connections
           .stream()
           .filter(connection -> connection.getConnectionName().equals(connectionName))
@@ -174,7 +135,7 @@ function decode(input) {
     } catch (ConfigurationException e) {
       log.info(
           "Config does not exist: customer={}; message={}",
-          customerId,
+          customer,
           e.getMessage());
       throw new NotFound(
           TransportErrorCode.fromHttp(Http.Status.NOT_FOUND),
