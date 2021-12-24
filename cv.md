@@ -1,5 +1,5 @@
 # Uliana Andreeva
-![CodeWars](https://www.codewars.com/users/ulyana_andreeva/badges/small?theme=dark)
+![CodeWars](https://www.codewars.com/users/brainydamage/badges/small?theme=dark)
 
 > Innovative, task-driven professional with __5+ years__ of experience in software development.  
 > Proficient in __backend development__, testing code and troubleshooting issues.  
@@ -145,5 +145,5 @@ function pickPeaks(arr){
 
 ___
 ## 🇬🇧 English Level
-![efset_badge](efset.png)  
+![efset_badge](.assets/img/efset.png)
 _*According to [EF SET Quick Check](https://www.efset.org/ru/quick-check/)_ 
