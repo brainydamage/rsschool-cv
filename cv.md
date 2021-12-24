@@ -145,5 +145,5 @@ function pickPeaks(arr){
 
 ___
 ## 🇬🇧 English Level
-![efset_badge](.assets/img/efset.png)
+![efset_badge](assets/img/efset.png)
 _*According to [EF SET Quick Check](https://www.efset.org/ru/quick-check/)_ 
