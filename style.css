@@ -13,7 +13,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    color: #000000;
+    color: rgba(0,0,0,0.8);
     font-family: Titillium, monospace;
 }
 
@@ -85,7 +85,28 @@ header a:hover {
 .section-title {
     font-size: 28px;
     font-variant: small-caps;
-    text-decoration: underline;
+    font-weight: 400;
+    background: #f1f5f8;
+    position: relative;
+    padding-left: 30px;
+}
+
+.section-title::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 33px;
+    background-color: #f2c100;
+}
+
+.section-title-left {
+    color: rgba(0,0,0,0.8);
+}
+
+.section-title-right {
+    background: #f1f5f8;
 }
 
 .section {
@@ -110,6 +131,10 @@ header a:hover {
 
 .left-side {
     background: #648381;
+    /*color: #FFFFFF;*/
+}
+
+.left-side p {
     color: #FFFFFF;
 }
 
@@ -153,8 +178,9 @@ header a:hover {
 }
 
 .work-title {
-    color: #575761;
+    /*color: #575761;*/
     font-variant: small-caps;
+    font-weight: 400;
     font-size: 22px;
     margin: 0;
 }
@@ -170,8 +196,8 @@ header a:hover {
 
 .work-dates {
     text-transform: uppercase;
-    color: #575761;
-    margin: 10px 0;
+    /*color: #575761;*/
+    margin: 10px 0 20px;
     font-size: 14px;
     font-weight: 200;
 }
@@ -185,6 +211,8 @@ header a:hover {
 
 .work-desc p {
     margin-top: 0;
+    position: relative;
+    left: -20px;
 }
 
 .work-icon {
