@@ -126,14 +126,22 @@ header a:hover {
 }
 
 .skills-list {
-    list-style-type: circle;
+    list-style-type: none;
+    padding: 0;
 }
 
-/*.skill-name {*/
-/*    color: #575761;*/
-/*    font-weight: 600;*/
-/*    letter-spacing: .1rem;*/
-/*}*/
+.skill-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 2rem;
+    align-items: start;
+}
+
+.skill-item p {
+    margin-top: 0;
+    position: relative;
+    left: -20px;
+}
 
 .work-list {
     list-style-type: none;
@@ -172,15 +180,42 @@ header a:hover {
     display: grid;
     grid-template-columns: auto 1fr;
     column-gap: 2rem;
-    align-items: center;
+    align-items: start;
 }
 
 .work-desc p {
-    margin-bottom: 0;
+    margin-top: 0;
 }
 
 .work-icon {
     color: #648381;
+}
+
+.contacts-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.contact-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 2rem;
+    align-items: start;
+}
+
+.contact-item p {
+    margin-top: 0;
+    position: relative;
+    left: -20px;
+}
+
+.contact-icon {
+    color: #ffffff;
+}
+
+.contact-link {
+    color: #ffffff;
+    padding: -20px;
 }
 
 @media (max-width: 768px) {
