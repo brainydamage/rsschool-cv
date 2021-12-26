@@ -3,9 +3,315 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+          rel="stylesheet">
     <title>CV</title>
 </head>
 <body>
-    <h1 class="name">ULIANA ANDREEVA</h1>
+<header class="header">
+    <div class="container">
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#work" class="nav-link">Work</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#code" class="nav-link">Code</a></li>
+                <li class="nav-item"><a href="#languages" class="nav-link">Languages</a></li>
+                <li class="nav-item"><a href="#contacts" class="nav-link">Contacts</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main class="main">
+    <div class="container">
+        <div class="name-container">
+            <div class="left-side">
+                <figure class="figure" id="photo">
+                    <img src="assets/img/ava1_square.jpg" alt="Photo">
+                </figure>
+            </div>
+            <div class="right-side">
+                <section class="section section-profile" id="profile">
+                    <h1 class="main-title"><b>Uliana</b><br>Andreeva</h1>
+                    <h3 class="title">Software Engineer</h3>
+                </section>
+            </div>
+        </div>
+
+        <div class="main-container">
+            <div class="left-side">
+                <div class="left-separator"></div>
+                <section class="section" id="about">
+                    <h2 class="section-title">About me</h2>
+                    <p>Innovative, task-driven professional with <b>5+ years</b> of experience in software development.
+                    </p>
+                    <p>Proficient in <b>backend development</b>, testing code and troubleshooting issues.</p>
+                    <p>Self-starter, quick-learner, problem-solver with a positive, collaborative, and <b>team-based
+                        attitude</b>.</p>
+                    <p>Fluent in <b>English</b> (B2+ to C1).</p>
+                </section>
+                <section class="section" id="contacts">
+                    <h2 class="section-title">Contacts</h2>
+                </section>
+                <section class="section" id="languages">
+                    <h2 class="section-title">Languages</h2>
+                </section>
+            </div>
+            <div class="right-side">
+                <div class="right-separator"></div>
+                <section class="section" id="skills">
+                    <h2 class="section-title">Areas of Expertise</h2>
+                    <ul class="skills-list">
+                        <li class="skill-item">
+                            <!--                            <span class="skill-area">Programming languages:</span>-->
+                            <span class="skill-name">Java, JavaScript, Bash</span>
+                        </li>
+                        <li class="skill-item">
+                            <!--                            <span class="skill-area">Web Technologies:</span>-->
+                            <span class="skill-name">Rest, J2EE, Spring</span>
+                        </li>
+                        <li class="skill-item">
+                            <!--                            <span class="skill-area">Data Management:</span>-->
+                            <span class="skill-name">PostgreSQL, DynamoDB</span>
+                        </li>
+                        <li class="skill-item">
+                            <!--                            <span class="skill-area">Cloud/DevOps:</span>-->
+                            <span class="skill-name">AWS, GCP, Jenkins, Docker, Kubernetes, Helm, Terraform</span>
+                        </li>
+                        <li class="skill-item">
+                            <!--                            <span class="skill-area">Monitoring:</span>-->
+                            <span class="skill-name">ELK, Grafana, Prometheus</span>
+                        </li>
+                        <li class="skill-item">
+                            <!--                            <span class="skill-area">VCS:</span>-->
+                            <span class="skill-name">GIT</span>
+                        </li>
+                    </ul>
+                </section>
+                <section class="section" id="work">
+                    <h2 class="section-title">Work Experience</h2>
+                    <ul class="work-list">
+                        <li class="work-item">
+                            <article class="work-info">
+                                <h3 class="work-title">
+                                    Fullstack Software Engineer
+                                </h3>
+                                <h4 class="work-company">
+                                    EPAM Systems
+                                </h4>
+                                <h5 class="work-dates">
+                                    March 2020 - Present
+                                </h5>
+                                <div class="work-desc">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                         viewBox="0 0 448 512" class="work-icon" height="1em" width="1em"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path>
+                                    </svg>
+                                    <p>Developed a brand new application for administrating users which increased
+                                        customer satisfaction by 73%.</p>
+                                </div>
+                                <div class="work-desc">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                         viewBox="0 0 448 512" class="work-icon" height="1em" width="1em"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path>
+                                    </svg>
+                                    <p>Improved development flow and implemented continuous delivery by introducing
+                                        feature toggling technique.</p>
+                                </div>
+                                <div class="work-desc">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                         viewBox="0 0 448 512" class="work-icon" height="1em" width="1em"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path>
+                                    </svg>
+                                    <p>Ensured data consistency by implementing bidirectional synchronization between
+                                        two services.</p>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="work-item">
+                            <article class="work-info">
+                                <h3 class="work-title">
+                                    Java Software Developer
+                                </h3>
+                                <h4 class="work-company">
+                                    EPAM Systems
+                                </h4>
+                                <h5 class="work-dates">
+                                    June 2018 - March 2020
+                                </h5>
+                                <div class="work-desc">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                         viewBox="0 0 448 512" class="work-icon" height="1em" width="1em"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path>
+                                    </svg>
+                                    <p>Minimised total cost of IT infrastructure by migrating several apps towards the
+                                        cloud.</p>
+                                </div>
+                                <div class="work-desc">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                         viewBox="0 0 448 512" class="work-icon" height="1em" width="1em"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path>
+                                    </svg>
+                                    <p>Increased code coverage from 30% up to 87% by creating unit tests. Increased
+                                        integration test coverage from ad-hoc to 70% of new release requirements.</p>
+                                </div>
+                                <div class="work-desc">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                         viewBox="0 0 448 512" class="work-icon" height="1em" width="1em"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path>
+                                    </svg>
+                                    <p>Improved service stability and usability by fixing 10+ critical bugs.</p>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="work-item">
+                            <article class="work-info">
+                                <h3 class="work-title">
+                                    DevOps and Cloud Engineer
+                                </h3>
+                                <h4 class="work-company">
+                                    EPAM Systems
+                                </h4>
+                                <h5 class="work-dates">
+                                    November 2017 - June 2018
+                                </h5>
+                                <div class="work-desc">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                         viewBox="0 0 448 512" class="work-icon" height="1em" width="1em"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path>
+                                    </svg>
+                                    <p>Increased development speed and quality by configuring effective CI/CD using
+                                        Jenkins.</p>
+                                </div>
+                                <div class="work-desc">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                         viewBox="0 0 448 512" class="work-icon" height="1em" width="1em"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path>
+                                    </svg>
+                                    <p>Improved service availability by improving AWS cloud infrastructure and
+                                        introducing autoscaling.</p>
+                                </div>
+                                <div class="work-desc">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                         viewBox="0 0 448 512" class="work-icon" height="1em" width="1em"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path>
+                                    </svg>
+                                    <p>Reduced operational costs by 25% by implementing event-driven serverless
+                                        architecture using AWS Lambda.</p>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="work-item">
+                            <article class="work-info">
+                                <h3 class="work-title">
+                                    Build Engineer
+                                </h3>
+                                <h4 class="work-company">
+                                    PROMT LLC
+                                </h4>
+                                <h5 class="work-dates">
+                                    May 2015 - February 2017
+                                </h5>
+                                <div class="work-desc">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                         viewBox="0 0 448 512" class="work-icon" height="1em" width="1em"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path>
+                                    </svg>
+                                    <p>Development of installation packages for desktop and server systems.</p>
+                                </div>
+                                <div class="work-desc">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                         viewBox="0 0 448 512" class="work-icon" height="1em" width="1em"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path>
+                                    </svg>
+                                    <p>Close work with Developer and QA teams to design and develop robust solutions to
+                                        meet client requirements for required functionality.</p>
+                                </div>
+                                <div class="work-desc">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                         viewBox="0 0 448 512" class="work-icon" height="1em" width="1em"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path>
+                                    </svg>
+                                    <p>Automation and scripting to improve existing process.</p>
+                                </div>
+                            </article>
+                        </li>
+                        <li class="work-item">
+                            <article class="work-info">
+                                <h3 class="work-title">
+                                    Senior Technical Support Engineer
+                                </h3>
+                                <h4 class="work-company">
+                                    PROMT LLC
+                                </h4>
+                                <h5 class="work-dates">
+                                    March 2012 - May 2015
+                                </h5>
+                                <div class="work-desc">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                         viewBox="0 0 448 512" class="work-icon" height="1em" width="1em"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path>
+                                    </svg>
+                                    <p>Customer Support.</p>
+                                </div>
+                                <div class="work-desc">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                         viewBox="0 0 448 512" class="work-icon" height="1em" width="1em"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path>
+                                    </svg>
+                                    <p>Manual software testing.</p>
+                                </div>
+                                <div class="work-desc">
+                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                                         viewBox="0 0 448 512" class="work-icon" height="1em" width="1em"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path>
+                                    </svg>
+                                    <p>Translating guides and instruction from Russian into English.</p>
+                                </div>
+                            </article>
+                        </li>
+                    </ul>
+                </section>
+                <section class="section" id="education">
+                    <h2 class="section-title">Education</h2>
+                </section>
+                <section class="section" id="projects">
+                    <h2 class="section-title">Pet-project</h2>
+                </section>
+            </div>
+        </div>
+        <section class="section" id="code">
+            <h2 class="section-title">Code Examples</h2>
+        </section>
+    </div>
+</main>
+<footer class="footer">
+    <div class="container">
+        FOOTER
+    </div>
+</footer>
 </body>
 </html>
