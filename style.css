@@ -86,23 +86,28 @@ header a:hover {
     font-size: 28px;
     font-variant: small-caps;
     font-weight: 400;
-    background: #f1f5f8;
-    position: relative;
-    padding-left: 30px;
 }
 
-.section-title::before {
+.section-title-right {
+    font-size: 28px;
+    font-variant: small-caps;
+    font-weight: 400;
+    /*position: relative;*/
+    /*padding-left: 30px;*/
+}
+
+.section-title-right::before {
     position: absolute;
     content: "";
     left: 0;
     top: 0;
     width: 20px;
     height: 33px;
-    background-color: #f2c100;
 }
 
 .section-title-left {
-    color: rgba(0,0,0,0.8);
+    /*background: #f1f5f8;*/
+    color: #ffffff;
 }
 
 .section-title-right {
