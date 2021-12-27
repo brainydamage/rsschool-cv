@@ -29,14 +29,6 @@ header a:hover {
     padding: 10px;
 }
 
-.main {
-    border: 1px solid darkgreen;
-}
-
-.footer {
-    border: 1px solid red;
-}
-
 .nav-list {
     display: flex;
     justify-content: space-around;
@@ -334,4 +326,17 @@ header a:hover {
     .right-separator {
         width: 0;
     }
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #f1f5f8;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-icon {
+    fill: #648381;
 }

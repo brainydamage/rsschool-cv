@@ -70,7 +70,7 @@
                             <svg class="leftside-icon" viewBox="0 0 20 20">
                                 <path d="M17.388,4.751H2.613c-0.213,0-0.389,0.175-0.389,0.389v9.72c0,0.216,0.175,0.389,0.389,0.389h14.775c0.214,0,0.389-0.173,0.389-0.389v-9.72C17.776,4.926,17.602,4.751,17.388,4.751 M16.448,5.53L10,11.984L3.552,5.53H16.448zM3.002,6.081l3.921,3.925l-3.921,3.925V6.081z M3.56,14.471l3.914-3.916l2.253,2.253c0.153,0.153,0.395,0.153,0.548,0l2.253-2.253l3.913,3.916H3.56z M16.999,13.931l-3.921-3.925l3.921-3.925V13.931z"></path>
                             </svg>
-                            <p><a href="mailto: 88.andreeva@gmail.com" class="leftside-link">88.andreeva@gmail.com</a>
+                            <p><a href="mailto:88.andreeva@gmail.com" class="leftside-link">88.andreeva@gmail.com</a>
                             </p>
                         </li>
                         <li class="leftside-item">
@@ -144,7 +144,8 @@
                             <svg class="proj-info-marker" viewBox="0 0 448 512">
                                 <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path>
                             </svg>
-                            <p>280+ users reported successful registration through the bot (from a total of 400 reports)</p>
+                            <p>280+ users reported successful registration through the bot (from a total of 400
+                                reports)</p>
                         </li>
                     </ul>
                     <div class="leftside-item proj-info-title">
@@ -426,6 +427,7 @@
                 </section>
             </div>
         </div>
+
         <section class="section" id="code">
             <h2 class="section-title section-title-right">Code Examples</h2>
             <pre class="pre">
@@ -436,7 +438,7 @@
           let posArr = arr
             .map((val, pos) => pos * Math.sign(val - arr[pos-1]))
             .filter(val => val && val!==0)
-            .filter((val, pos, arr) => val>0 && arr[pos-1] < val > arr[pos+1]);
+            .filter((val, pos, arr) => val>0 && arr[pos-1] &lt; val > arr[pos+1]);
 
           return {pos: posArr, peaks: posArr.map(pos => arr[pos])};
         }
@@ -448,13 +450,13 @@
         //Create all permutations of an input string.
 
         function permutations(string) {
-          if (!string.length && string.length < 2 ){
+          if (!string.length && string.length &lt; 2 ){
             return [string];
           }
 
           let result = [];
           let result = [];
-          for (let i = 0; i < string.length; i++) {
+          for (let i = 0; i &lt; string.length; i++) {
             const currentChar = string[i];
             const remainder = string.slice(0, i) + string.slice(i + 1, string.length);
 
@@ -469,10 +471,18 @@
         </section>
     </div>
 </main>
+
 <footer class="footer">
-    <div class="container">
-        FOOTER
+    <div class="footer-container">
+        <a class="footer-icon" href="https://github.com/brainydamage" target="_blank">
+            <img src="assets/img/github.svg" alt="GitHub" width="86" height="32">
+        </a>
+        <p class="footer-year">2021</p>
+        <a class="footer-icon" href="https://rs.school/js/" target="_blank">
+            <img src="assets/img/rsschool.svg" alt="RS School" width="86" height="32">
+        </a>
     </div>
 </footer>
+
 </body>
 </html>
