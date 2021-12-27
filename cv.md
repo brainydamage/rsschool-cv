@@ -1,5 +1,5 @@
 # Uliana Andreeva
-![CodeWars](https://www.codewars.com/users/brainydamage/badges/small?theme=dark)
+![CodeWars](https://www.codewars.com/users/brainydamage/badges/small?theme=light)
 
 > Innovative, task-driven professional with __5+ years__ of experience in software development.  
 > Proficient in __backend development__, testing code and troubleshooting issues.  
