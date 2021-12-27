@@ -432,40 +432,40 @@
             <h2 class="section-title section-title-right">Code Examples</h2>
             <pre class="pre">
                 <code>
-        //Find the peaks of a numeric array.
+//Find the peaks of a numeric array.
 
-        function pickPeaks(arr){
-          let posArr = arr
-            .map((val, pos) => pos * Math.sign(val - arr[pos-1]))
-            .filter(val => val && val!==0)
-            .filter((val, pos, arr) => val>0 && arr[pos-1] &lt; val > arr[pos+1]);
+function pickPeaks(arr){
+  let posArr = arr
+    .map((val, pos) => pos * Math.sign(val - arr[pos-1]))
+    .filter(val => val && val!==0)
+    .filter((val, pos, arr) => val>0 && arr[pos-1] &lt; val > arr[pos+1]);
 
-          return {pos: posArr, peaks: posArr.map(pos => arr[pos])};
-        }
+  return {pos: posArr, peaks: posArr.map(pos => arr[pos])};
+}
                 </code>
             </pre>
             <div class="center-separator"></div>
             <pre class="pre">
                 <code>
-        //Create all permutations of an input string.
+//Create all permutations of an input string.
 
-        function permutations(string) {
-          if (!string.length && string.length &lt; 2 ){
-            return [string];
-          }
+function permutations(string) {
+  if (!string.length && string.length &lt; 2 ){
+    return [string];
+  }
 
-          let result = [];
-          let result = [];
-          for (let i = 0; i &lt; string.length; i++) {
-            const currentChar = string[i];
-            const remainder = string.slice(0, i) + string.slice(i + 1, string.length);
+  let result = [];
+  let result = [];
+  for (let i = 0; i &lt; string.length; i++) {
+    const currentChar = string[i];
+    const remainder = string.slice(0, i) + string.slice(i + 1, string.length);
 
-            for (let permutation of permutations(remainder)) {
-              result.push(currentChar + permutation);
-            }
-          }
-          return [...new Set(result)];
-        }
+    for (let permutation of permutations(remainder)) {
+      result.push(currentChar + permutation);
+    }
+  }
+  return [...new Set(result)];
+}
                 </code>
             </pre>
         </section>
