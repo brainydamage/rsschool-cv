@@ -44,7 +44,7 @@ header a:hover {
     margin: 0;
     padding: 10px;
     background: #f1f5f8;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .nav-link {
@@ -56,13 +56,12 @@ header a:hover {
 
 .main-container {
     display: grid;
-    grid-template-columns: 400px 3fr;
-    /*grid-auto-columns: minmax(300px, auto);*/
+    grid-template-columns: 1fr 1.5fr;
 }
 
 .name-container {
     display: grid;
-    grid-template-columns: 400px 3fr;
+    grid-template-columns: 1fr 1.5fr;
     /*grid-auto-columns: minmax(300px, auto);*/
 }
 
@@ -92,8 +91,9 @@ header a:hover {
     font-size: 28px;
     font-variant: small-caps;
     font-weight: 400;
-    /*position: relative;*/
-    /*padding-left: 30px;*/
+    position: relative;
+    padding-left: 30px;
+    background: #f1f5f8;
 }
 
 .section-title-right::before {
@@ -103,15 +103,24 @@ header a:hover {
     top: 0;
     width: 20px;
     height: 33px;
+    background: #648381;
 }
 
 .section-title-left {
     /*background: #f1f5f8;*/
     color: #ffffff;
+    position: relative;
+    padding-left: 30px;
 }
 
-.section-title-right {
-    background: #f1f5f8;
+.section-title-left::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 33px;
+    background: #ffffff;
 }
 
 .section {
@@ -123,7 +132,7 @@ header a:hover {
 }
 
 .section p {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 200;
     font-variant: none;
 }
@@ -141,6 +150,7 @@ header a:hover {
 
 .left-side p {
     color: #FFFFFF;
+    line-height: 150%;
 }
 
 .left-separator {
@@ -153,6 +163,12 @@ header a:hover {
     height: 10px;
     width: 100%;
     background: #648381;
+}
+
+.center-separator {
+    height: 3px;
+    width: 100%;
+    background: #f1f5f8;
 }
 
 .skills-list {
@@ -173,16 +189,16 @@ header a:hover {
     left: -20px;
 }
 
-.work-list {
+.work-study-list {
     list-style-type: none;
     padding-left: 0;
 }
 
-.work-info {
+.work-study-info {
     margin-top: 30px;
 }
 
-.work-title {
+.work-study-title {
     /*color: #575761;*/
     font-variant: small-caps;
     font-weight: 400;
@@ -190,7 +206,7 @@ header a:hover {
     margin: 0;
 }
 
-.work-company {
+.work-study-place {
     background: #f1f5f8;
     text-transform: uppercase;
     color: #648381;
@@ -199,60 +215,123 @@ header a:hover {
     padding: 5px;
 }
 
-.work-dates {
+.work-study-dates {
     text-transform: uppercase;
-    /*color: #575761;*/
     margin: 10px 0 20px;
     font-size: 14px;
     font-weight: 200;
 }
 
-.work-desc {
+.work-study-desc {
     display: grid;
     grid-template-columns: auto 1fr;
     column-gap: 2rem;
     align-items: start;
 }
 
-.work-desc p {
+.work-study-desc p {
     margin-top: 0;
     position: relative;
     left: -20px;
 }
 
-.work-icon {
-    color: #648381;
+.list-marker {
+    width: 1em;
+    height: 1em;
+    margin-top: 3px;
+    fill: #648381;
 }
 
-.contacts-list {
+.leftside-list {
     list-style-type: none;
     padding-left: 0;
 }
 
-.contact-item {
+.leftside-item {
     display: grid;
     grid-template-columns: auto 1fr;
     column-gap: 2rem;
     align-items: start;
 }
 
-.contact-item p {
+.leftside-item p {
     margin-top: 0;
     position: relative;
     left: -20px;
+    /*font-variant: small-caps;*/
+    font-size: 18px;
 }
 
-.contact-icon {
-    color: #ffffff;
+.leftside-icon {
+    width: 2em;
+    height: 2em;
+    fill: #ffffff;
 }
 
-.contact-link {
+.leftside-link {
     color: #ffffff;
     padding: -20px;
+    transition: 0.5s;
 }
 
-@media (max-width: 768px) {
-    /*.section {*/
-    /*    width: 100%;*/
-    /*}*/
+.leftside-link:hover {
+    color: #648381;
+    background: #f1f5f8;
+}
+
+.proj-info-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.proj-info-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 2rem;
+    align-items: start;
+}
+
+.proj-info-item p {
+    margin-top: 0;
+    position: relative;
+    left: -20px;
+    font-size: 16px;
+}
+
+.proj-info-title {
+    margin-top: 50px;
+}
+
+.proj-info-title p {
+    font-variant: small-caps;
+    font-size: 22px;
+    margin: 0;
+}
+
+.proj-info-marker {
+    width: 1em;
+    height: 1em;
+    margin-top: 3px;
+    fill: #ffffff;
+}
+
+@media (max-width: 900px) {
+    .main-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .name-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .right-side {
+        order: -1;
+        width: 100%;
+    }
+
+    .right-separator {
+        width: 0;
+    }
 }
