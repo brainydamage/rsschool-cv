@@ -453,11 +453,11 @@
 
 function pickPeaks(arr){
   let posArr = arr
-    .map((val, pos) => pos * Math.sign(val - arr[pos-1]))
-    .filter(val => val && val!==0)
-    .filter((val, pos, arr) => val>0 && arr[pos-1] &lt; val > arr[pos+1]);
+    .map((val, pos) =&gt; pos * Math.sign(val - arr[pos-1]))
+    .filter(val =&gt; val &amp;&amp; val!==0)
+    .filter((val, pos, arr) =&gt; val&gt;0 &amp;&amp; arr[pos-1] &lt; val &gt; arr[pos+1]);
 
-  return {pos: posArr, peaks: posArr.map(pos => arr[pos])};
+  return {pos: posArr, peaks: posArr.map(pos =&gt; arr[pos])};
 }
                 </code>
             </pre>
@@ -467,7 +467,7 @@ function pickPeaks(arr){
 //Create all permutations of an input string.
 
 function permutations(string) {
-  if (!string.length && string.length &lt; 2 ){
+  if (!string.length &amp;&amp; string.length &lt; 2 ){
     return [string];
   }
 
